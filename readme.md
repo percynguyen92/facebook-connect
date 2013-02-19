@@ -3,10 +3,12 @@ Facebook-Connect
 
 This spark that extends Facebook-SDK PHP library.
 Enables reading of $_GET parameter.
-Override three methods:
-    * getCode 
-    * getSignedRequest
-    * getLoginUrl
+Override three methods: 
+
+      getCode()   
+      getSignedRequest()
+      getLoginUrl($params = array())
+   
 
 Usage
 ------------
@@ -24,6 +26,13 @@ Example showing how to get the url authentication:
 
 Other methods see: https://developers.facebook.com/docs/reference/php/
 
+Default Scopes
+--------------
+
+      user_about_me, user_activities, user_likes, user_birthday, user_location, user_website, email, user_events, user_actions.music, user_groups, manage_pages
+
+Use $this->facebookconnect->addScope($string) to add new scope.
+
 Author
 ------
 
@@ -34,7 +43,7 @@ License
 
 Facebook-Connect is released under the Apache License. 
 
-Copyright [2012] [Jansen Felipe]
+Copyright [2013] [Jansen Felipe]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
